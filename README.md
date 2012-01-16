@@ -4,15 +4,36 @@ vim-symfony
 snippets
 --------
 
-```
-am
-controller
-em
-redirect
-@oc
-@oe
-@ot
-@rn
-@r
-@t
-```
+Annotation:
+
+`@a` - @Assert\  
+`@o` - @ORM\  
+`@oc` - @ORM\Column()  
+`@oc` - @ORM\Entity()  
+`@og` - @ORM\GeneratedValue(strategy="AUTO")  
+`@oi` - @ORM\Id  
+`@olife` - @ORM\HasLifecycleCallbacks()  
+`@ot` - @ORM\Table()  
+`@r` - @Route()  
+`@rn` - @Route("", name="")  
+`@t` - @Template()
+
+Use:
+
+`useassert` - use Symfony\Component\Validator\Constraints as Assert;  
+`usecontroller` - use Symfony\Bundle\FrameworkBundle\Controller\Controller;  
+`usefile` - use Symfony\Component\HttpFoundation\File\UploadedFile;  
+`useorm` - use Doctrine\ORM\Mapping as ORM;  
+`userequest` - use Symfony\Component\HttpFoundation\Request;  
+`useroute` - use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;  
+`usetemplate` - use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
+
+Other:
+
+`abstracttype` - abstract type template  
+`am` - action method  
+`controller` - controller template  
+`em` - entity manager  
+`notfound` - create not found exception  
+`redirect` - $this->redirect('');  
+`repository` - $this->getDoctrine()->getRepository('')
