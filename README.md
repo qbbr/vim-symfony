@@ -1,6 +1,11 @@
 vim-symfony
 ===========
 
+autocomplete routes and service
+-------------------------------
+
+`<C-x><C-u>`
+
 snippets
 --------
 
