@@ -6,6 +6,35 @@ autocomplete routes and service
 
 `<C-x><C-u>`
 
+jump to view
+------------
+
+`<leader>v`
+
+```php
+<?php
+
+namespace Acme\DemoBundle\Controller;
+
+use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
+
+class DefaultController extends Controller
+{
+    /**
+     * @Route("/")
+     * @Template()
+     */
+    public function indexAction()
+    {
+        // CURSOR HERE and press <leader>v
+        // will open: src/Acme/DemoBundle/Resources/views/Default/index.html.twig
+        return array();
+    }
+}
+```
+
 snippets
 --------
 
