@@ -48,7 +48,7 @@ function! s:Sf2jmp2viewFromView()
     mark C
 
     let linecontent = getline(line('.'))
-    let matches = matchlist(linecontent, '\v\C([A-Z]{1}[a-z]{1,})(\w+Bundle):([^:]+)?:(\w+\.html\.twig)')
+    let matches = matchlist(linecontent, '\v\C([A-Z]{1}[a-z]{1,})(\w+Bundle):([^:]+)?:([^.:]+\.html\.twig)')
 
     " not found
     if (matches == [])
