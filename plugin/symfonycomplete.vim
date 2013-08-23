@@ -1,3 +1,5 @@
+" author: docteurklein (https://github.com/docteurklein)
+
 if !exists("g:symfony_app_console_path")
     let g:symfony_app_console_path = "app/console"
 endif

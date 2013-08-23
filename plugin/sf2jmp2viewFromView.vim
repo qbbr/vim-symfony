@@ -1,4 +1,4 @@
-" author: qbbr <r2.kenny@gmail.com>
+" author: qbbr <imqbbr@gmail.com>
 
 function! s:Sf2jmp2viewFromView()
     mark C
