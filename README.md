@@ -14,17 +14,30 @@ vim for symfony 2
  * jump to view (twig) from controller
  * jump to view (twig) from view (twig)
 
-### expample:
+### expamples:
+
+```yaml
+_welcome:
+    pattern:  /
+    defaults: { _controller: AcmeDemoBundle:Welcome:index } # cursor at this line
+    # will open: src/Acme/DemoBundle/Controller/WelcomeController.php
+
+```
 
 ```php
 class DefaultController extends Controller
 {
     public function indexAction()
     {
-        // CURSOR HERE and press <leader>v
+        // cursor here and press <leader>v
         // will open: src/Acme/DemoBundle/Resources/views/Default/index.html.twig
     }
 }
+```
+
+```jinja
+{% extends "AcmeDemoBundle::layout.html.twig" %}
+{# will open: src/Acme/DemoBundle/Resources/views/layout.html.twig #}
 ```
 
 ## snippets
