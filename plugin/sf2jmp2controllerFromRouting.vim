@@ -8,12 +8,12 @@ function! s:Sf2jmp2controllerFromRouting()
 
     " @AcmeDemoBundle/Controller/DefaultController.php
     " 1 - str, 2 - namespace, 3 - bundle, 4 - controller
-    let matches = matchlist(linecontent, '\v\C\@([A-Z]{1}[a-z]{1,})(\w+Bundle)/Controller/(\w+)Controller\.php')
+    let matches = matchlist(linecontent, '\v\C\@([A-Z]{1}[a-z]{1,})(\w+Bundle)/Controller/([a-zA-Z\\\/]+)Controller\.php')
 
     if (empty(matches))
         " _controller: AcmeDemoBundle:Welcome:index
         " 5 - action (not need)
-        let matches = matchlist(linecontent, '\v\C_controller: ([A-Z]{1}[a-z]{1,})(\w+Bundle):(\w+):(\w+)')
+        let matches = matchlist(linecontent, '\v\C_controller: ([A-Z]{1}[a-z]{1,})(\w+Bundle):([a-zA-Z\\\/]+):(\w+)')
     endif
 
     if (empty(matches))
@@ -22,7 +22,7 @@ function! s:Sf2jmp2controllerFromRouting()
         return
     endif
 
-    let $filename = 'src/' . matches[1] . '/' . matches[2] . '/Controller/'. matches[3] . 'Controller.php'
+    let $filename = 'src/' . matches[1] . '/' . matches[2] . '/Controller/'. substitute(matches[3], "\\", "\/", "") . 'Controller.php'
 
     if filereadable($filename)
         edit $filename
