@@ -33,5 +33,5 @@ endfunction
 
 com! Sf2jmp2controllerFromRouting call s:Sf2jmp2controllerFromRouting()
 
-" create a mapping only in routing.yml
-autocmd BufEnter routing.yml nmap <buffer><leader>v :Sf2jmp2controllerFromRouting<CR>
+" create a mapping only in *.yml
+autocmd BufEnter *.yml nmap <buffer><leader>v :Sf2jmp2controllerFromRouting<CR>
