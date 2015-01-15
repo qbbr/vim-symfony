@@ -3,17 +3,12 @@
 namespace ${1:Acme}\${2:Demo}Bundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 
 class ${3:Default}Controller extends Controller
 {
-    /**
-     * @Route("/")
-     * @Template()
-     */
-    public function indexAction()
+    public function ${4:index}Action()
     {
-        return [];
+        ${5}
+        return $this->render('$1$2Bundle:$3:$4.html.twig');
     }
 }
