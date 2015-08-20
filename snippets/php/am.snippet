@@ -1,5 +1,5 @@
-public function ${1:index}Action()
+public function ${1:index}Action(Request $request)
 {
     ${2}
-    return [];
+    return $this->render('AppBundle:Default:$1.html.twig');
 }

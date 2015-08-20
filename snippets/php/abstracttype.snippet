@@ -4,6 +4,7 @@ namespace ${1:Acme}\${2:Demo}Bundle\Form\Type;
 
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
+use Symfony\Component\OptionsResolver\OptionsResolver;
 
 class ${3:Default}Type extends AbstractType
 {
@@ -15,5 +16,12 @@ class ${3:Default}Type extends AbstractType
     public function getName()
     {
         return '';
+    }
+
+    public function configureOptions(OptionsResolver $resolver)
+    {
+        $resolver->setDefaults([
+            'data_class' => '$1\$2Bundle\Entity\$3',
+        ]);
     }
 }
