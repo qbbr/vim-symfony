@@ -19,12 +19,14 @@ fun! CompleteSymfonyContainer(base, res)
         return 0
     endif
 
+    call add(a:res, { 'word': '[Service ID]', 'menu': '[Class name]' })
+
     for m in split(output, "\n")
         let row = split(m)
-        if len(row) == 3
-            let [service, scope, class] = row
+        if len(row) == 2
+            let [service, class] = row
             if service =~ '^' . a:base
-                let menu = 'scope: '. scope .', class: '. class
+                let menu = 'class: ' . class
                 call add(a:res, { 'word': service, 'menu': menu })
             endif
         endif
@@ -38,12 +40,14 @@ fun! CompleteSymfonyRouter(base, res)
         return 0
     endif
 
+    call add(a:res, { 'word': '[Route]', 'menu': '[Method, Scheme Host, Path]' })
+
     for m in split(output, "\n")
         let row = split(m)
         if len(row) == 5
             let [route, method, schema, host, path] = row
             if route =~ '^' . a:base
-                let menu = 'method: '. method .', path: '. path
+                let menu = path . "\t\t(method: " . method . ', scheme: ' . schema . ', host: ' . host . ')'
                 call add(a:res, { 'word': route, 'menu': menu })
             endif
         endif

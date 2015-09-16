@@ -72,7 +72,7 @@ class DefaultController extends Controller
  * `abstracttype` - abstract type template
  * `am` - action method
  * `controller` - controller template
- * `em` - entity manager
+ * `em` - get entity manager
  * `notfound` - create not found exception
- * `redirect` - $this->redirect('');
+ * `redirect` - $this->redirectToRoute('');
  * `repository` - $this->getDoctrine()->getRepository('')
