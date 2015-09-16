@@ -13,7 +13,7 @@ if !exists("g:symfony_enable_shell_mapping")
 endif
 
 fun! CompleteSymfonyContainer(base, res)
-    let shellcmd = g:symfony_app_console_caller. ' '.g:symfony_app_console_path.' container:debug'
+    let shellcmd = g:symfony_app_console_caller. ' '.g:symfony_app_console_path.' debug:container'
     let output = system(shellcmd)
     if v:shell_error
         return 0
@@ -32,7 +32,7 @@ fun! CompleteSymfonyContainer(base, res)
 endfun
 
 fun! CompleteSymfonyRouter(base, res)
-    let shellcmd = g:symfony_app_console_caller. ' '.g:symfony_app_console_path.' router:debug'
+    let shellcmd = g:symfony_app_console_caller. ' '.g:symfony_app_console_path.' debug:router'
     let output = system(shellcmd)
     if v:shell_error
         return 0
