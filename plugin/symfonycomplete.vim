@@ -40,7 +40,7 @@ fun! CompleteSymfonyRouter(base, res)
         return 0
     endif
 
-    call add(a:res, { 'word': '[Route]', 'menu': '[Method, Scheme Host, Path]' })
+    call add(a:res, { 'word': '[Route]', 'menu': '[Path (Method, Scheme, Host)]' })
 
     for m in split(output, "\n")
         let row = split(m)
