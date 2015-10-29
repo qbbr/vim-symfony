@@ -58,7 +58,7 @@ class DefaultController extends Controller
 
 ### Use:
 
- * `usearray.snippet` - use Doctrine\Common\Collections\ArrayCollection;
+ * `usearray` - use Doctrine\Common\Collections\ArrayCollection;
  * `useassert` - use Symfony\Component\Validator\Constraints as Assert;
  * `usecontroller` - use Symfony\Bundle\FrameworkBundle\Controller\Controller;
  * `usefile` - use Symfony\Component\HttpFoundation\File\UploadedFile;
