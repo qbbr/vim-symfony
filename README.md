@@ -69,7 +69,8 @@ class DefaultController extends Controller
 
 ### Other:
 
- * `abstracttype` - abstract type template
+ * `dump`, `d` - dump() function
+ * `formtype` - form type template
  * `am` - action method
  * `controller` - controller template
  * `em` - get entity manager
