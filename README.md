@@ -1,12 +1,14 @@
-# vim-symfony
+# Symfony 2 Vim plugin
 
-vim for symfony 2
-
-## autocomplete routes and service
+## Autocomplete routes and services
 
 `<C-x><C-u>`
 
-## jumps
+## Symfony shell
+
+`<C-f>`
+
+## Jumps
 
 `<leader>v`
 
@@ -14,7 +16,7 @@ vim for symfony 2
  * jump to view (twig) from controller
  * jump to view (twig) from view (twig)
 
-### expamples:
+### Expamples:
 
 ```yaml
 _welcome:
@@ -40,7 +42,7 @@ class DefaultController extends Controller
 {# will open: src/Acme/DemoBundle/Resources/views/layout.html.twig #}
 ```
 
-## snippets
+## Snippets
 
 ### Annotation:
 
