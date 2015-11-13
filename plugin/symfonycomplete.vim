@@ -1,4 +1,4 @@
-" author: docteurklein (https://github.com/docteurklein)
+" original:  https://github.com/docteurklein/vim-symfony/blob/master/plugin/symfonycomplete.vim
 
 if !exists("g:symfony_app_console_path")
     let g:symfony_app_console_path = "app/console"
@@ -45,9 +45,9 @@ fun! CompleteSymfonyRouter(base, res)
     for m in split(output, "\n")
         let row = split(m)
         if len(row) == 5
-            let [route, method, schema, host, path] = row
+            let [route, method, scheme, host, path] = row
             if route =~ '^' . a:base
-                let menu = path . "\t\t(method: " . method . ', scheme: ' . schema . ', host: ' . host . ')'
+                let menu = path . "\t\t(method: " . method . ', scheme: ' . scheme . ', host: ' . host . ')'
                 call add(a:res, { 'word': route, 'menu': menu })
             endif
         endif
