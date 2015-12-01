@@ -37,7 +37,7 @@ class DefaultController extends Controller
 }
 ```
 
-```jinja
+```twig
 {% extends "AcmeDemoBundle::layout.html.twig" %}
 {# will open: src/Acme/DemoBundle/Resources/views/layout.html.twig #}
 ```
@@ -56,6 +56,7 @@ class DefaultController extends Controller
  * `@ot` - @ORM\Table()
  * `@r` - @Route()
  * `@rn` - @Route("", name="")
+ * `@m` - @Method("")
  * `@t` - @Template()
 
 ### Use:
@@ -73,9 +74,10 @@ class DefaultController extends Controller
 
  * `dump`, `d` - dump() function
  * `formtype` - form type template
+ * `get` - $this->get('')
  * `am` - action method
  * `controller` - controller template
- * `em` - get entity manager
- * `notfound` - create not found exception
+ * `em` - $em = $this->getDoctrine()->getManager();
+ * `notfound` - throw not found exception
  * `redirect` - $this->redirectToRoute('');
  * `repository` - $this->getDoctrine()->getRepository('')
