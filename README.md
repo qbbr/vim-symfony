@@ -44,7 +44,7 @@ class DefaultController extends Controller
 
 ## Snippets
 
-### Annotation:
+### Annotation
 
  * `@a` - @Assert\
  * `@o` - @ORM\
@@ -54,12 +54,12 @@ class DefaultController extends Controller
  * `@oi` - @ORM\Id
  * `@olife` - @ORM\HasLifecycleCallbacks()
  * `@ot` - @ORM\Table()
- * `@r` - @Route()
+ * `@r` - @Route("")
  * `@rn` - @Route("", name="")
  * `@m` - @Method("")
  * `@t` - @Template()
 
-### Use:
+### Use
 
  * `usearray` - use Doctrine\Common\Collections\ArrayCollection;
  * `useassert` - use Symfony\Component\Validator\Constraints as Assert;
@@ -70,14 +70,73 @@ class DefaultController extends Controller
  * `useroute` - use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
  * `usetemplate` - use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 
-### Other:
+### Controller
 
+ * `controller` - controller skeleton class
  * `dump`, `d` - dump() function
- * `formtype` - form type template
  * `get` - $this->get('')
- * `am` - action method
- * `controller` - controller template
+ * `am` - action method for controller
  * `em` - $em = $this->getDoctrine()->getManager();
  * `notfound` - throw not found exception
  * `redirect` - $this->redirectToRoute('');
  * `repository` - $this->getDoctrine()->getRepository('')
+
+### Form
+
+ * `form` - form type skeleton class
+
+#### Text Fields
+
+ * `texttype` - use Symfony\Component\Form\Extension\Core\Type\TextType;
+ * `textareatype` - use Symfony\Component\Form\Extension\Core\Type\TextareaType;
+ * `emailtype` - use Symfony\Component\Form\Extension\Core\Type\EmailType;
+ * `integertype` - use Symfony\Component\Form\Extension\Core\Type\IntegerType;
+ * `moneytype` - use Symfony\Component\Form\Extension\Core\Type\MoneyType;
+ * `numbertype` - use Symfony\Component\Form\Extension\Core\Type\NumberType;
+ * `passwordtype` - use Symfony\Component\Form\Extension\Core\Type\PasswordType;
+ * `percenttype` - use Symfony\Component\Form\Extension\Core\Type\PercentType;
+ * `searchtype` - use Symfony\Component\Form\Extension\Core\Type\SearchType;
+ * `urltype` - use Symfony\Component\Form\Extension\Core\Type\UrlType;
+ * `rangetype` - use Symfony\Component\Form\Extension\Core\Type\RangeType;
+
+#### Choice Fields
+
+ * `choicetype` - use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
+ * `entitytype` - use Symfony\Bridge\Doctrine\Form\Type\EntityType;
+ * `countrytype` - use Symfony\Bridge\Doctrine\Form\Type\CountryType;
+ * `languagetype` - use Symfony\Bridge\Doctrine\Form\Type\LanguageType;
+ * `localetype` - use Symfony\Bridge\Doctrine\Form\Type\LocaleType;
+ * `timezonetype` - use Symfony\Bridge\Doctrine\Form\Type\TimezoneType;
+ * `currencytype` - use Symfony\Bridge\Doctrine\Form\Type\CurrencyType;
+
+#### Date and Time Fields
+
+ * `datetype` - use Symfony\Component\Form\Extension\Core\Type\DateType;
+ * `datetimetype` - use Symfony\Component\Form\Extension\Core\Type\DateTimeType;
+ * `timetype` - use Symfony\Component\Form\Extension\Core\Type\TimeType;
+ * `birthdaytype` - use Symfony\Component\Form\Extension\Core\Type\BirthdayType;
+
+#### Other Fields
+
+ * `checkboxtype` - use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
+ * `filetype` - use Symfony\Component\Form\Extension\Core\Type\FileType;
+ * `radiotype` - use Symfony\Component\Form\Extension\Core\Type\RadioType;
+
+#### Field Groups
+
+ * `collectiontype` - use Symfony\Component\Form\Extension\Core\Type\CollectionType;
+ * `repeatedtype` - use Symfony\Component\Form\Extension\Core\Type\RepeatedType;
+
+#### Hidden Fields
+
+ * `hiddentype` - use Symfony\Component\Form\Extension\Core\Type\HiddenType;
+
+#### Buttons
+
+ * `buttontype` - use Symfony\Component\Form\Extension\Core\Type\ButtonType;
+ * `resettype` - use Symfony\Component\Form\Extension\Core\Type\ResetType;
+ * `submittype` - use Symfony\Component\Form\Extension\Core\Type\SubmitType;
+
+#### Base Fields
+
+ * `formtype` - use Symfony\Component\Form\Extension\Core\Type\FormType;
