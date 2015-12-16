@@ -58,6 +58,7 @@ class DefaultController extends Controller
  * `@rn` - @Route("", name="")
  * `@m` - @Method("")
  * `@t` - @Template()
+ * `@pc` - @ParamConverter("")
 
 ### Use
 
@@ -69,6 +70,7 @@ class DefaultController extends Controller
  * `userequest` - use Symfony\Component\HttpFoundation\Request;
  * `useroute` - use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
  * `usetemplate` - use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
+ * `useparamconverter` - use Sensio\Bundle\FrameworkExtraBundle\Configuration\ParamConverter;
 
 ### Controller
 
