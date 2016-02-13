@@ -64,13 +64,16 @@ class DefaultController extends Controller
 
  * `usearray` - use Doctrine\Common\Collections\ArrayCollection;
  * `useassert` - use Symfony\Component\Validator\Constraints as Assert;
+ * `usecache` - use Sensio\Bundle\FrameworkExtraBundle\Configuration\Cache;
  * `usecontroller` - use Symfony\Bundle\FrameworkBundle\Controller\Controller;
  * `usefile` - use Symfony\Component\HttpFoundation\File\UploadedFile;
+ * `usemethod` - use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
  * `useorm` - use Doctrine\ORM\Mapping as ORM;
+ * `useparamconverter` - use Sensio\Bundle\FrameworkExtraBundle\Configuration\ParamConverter;
  * `userequest` - use Symfony\Component\HttpFoundation\Request;
  * `useroute` - use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
+ * `usesecurity` - use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
  * `usetemplate` - use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
- * `useparamconverter` - use Sensio\Bundle\FrameworkExtraBundle\Configuration\ParamConverter;
 
 ### Controller
 
@@ -79,7 +82,7 @@ class DefaultController extends Controller
  * `get` - $this->get('')
  * `am` - action method for controller
  * `em` - $em = $this->getDoctrine()->getManager();
- * `notfound` - throw not found exception
+ * `notfound` - throw $this->createNotFoundException('');
  * `redirect` - $this->redirectToRoute('');
  * `repository` - $this->getDoctrine()->getRepository('')
 
