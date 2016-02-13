@@ -49,11 +49,11 @@ class DefaultController extends Controller
  * `@a` - @Assert\
  * `@o` - @ORM\
  * `@oc` - @ORM\Column()
- * `@oc` - @ORM\Entity()
+ * `@oe` - @ORM\Entity(repositoryClass="")
  * `@og` - @ORM\GeneratedValue(strategy="AUTO")
  * `@oi` - @ORM\Id
  * `@olife` - @ORM\HasLifecycleCallbacks()
- * `@ot` - @ORM\Table()
+ * `@ot` - @ORM\Table(name="")
  * `@r` - @Route("")
  * `@rn` - @Route("", name="")
  * `@m` - @Method("")
