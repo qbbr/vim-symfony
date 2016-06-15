@@ -16,7 +16,7 @@
  * jump to view (twig) from controller
  * jump to view (twig) from view (twig)
 
-### Expamples:
+### Examples:
 
 ```yaml
 _welcome:
@@ -44,7 +44,7 @@ class DefaultController extends Controller
 
 ## Snippets
 
-### Annotation
+### Annotations
 
  * `@a` - @Assert\
  * `@o` - @ORM\
@@ -60,7 +60,7 @@ class DefaultController extends Controller
  * `@t` - @Template()
  * `@pc` - @ParamConverter("")
 
-### Use
+### `Use` statements
 
  * `usearray` - use Doctrine\Common\Collections\ArrayCollection;
  * `useassert` - use Symfony\Component\Validator\Constraints as Assert;
