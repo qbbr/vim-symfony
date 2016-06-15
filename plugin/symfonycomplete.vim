@@ -1,7 +1,7 @@
 " original:  https://github.com/docteurklein/vim-symfony/blob/master/plugin/symfonycomplete.vim
 
 if !exists("g:symfony_app_console_path")
-    let g:symfony_app_console_path = "app/console"
+    let g:symfony_app_console_path = "bin/console"
 endif
 
 if !exists("g:symfony_app_console_caller")
