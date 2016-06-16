@@ -68,9 +68,12 @@ class DefaultController extends Controller
  * `usecontroller` - use Symfony\Bundle\FrameworkBundle\Controller\Controller;
  * `usefile` - use Symfony\Component\HttpFoundation\File\UploadedFile;
  * `usemethod` - use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
+ * `usenotfound` - use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
  * `useorm` - use Doctrine\ORM\Mapping as ORM;
  * `useparamconverter` - use Sensio\Bundle\FrameworkExtraBundle\Configuration\ParamConverter;
  * `userequest` - use Symfony\Component\HttpFoundation\Request;
+ * `useresponse` - use Symfony\Component\HttpFoundation\Response;
+ * `usejsonresponse` - use Symfony\Component\HttpFoundation\JsonResponse;
  * `useroute` - use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
  * `usesecurity` - use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
  * `usetemplate` - use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
