@@ -1,4 +1,4 @@
-# Symfony 3 Vim plugin
+# Symfony Vim plugin
 
 ## Autocomplete routes and services
 
