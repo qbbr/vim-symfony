@@ -6,6 +6,8 @@
 
 ## Symfony shell
 
+sf4 not supported, because new sf console does not exist "-s" option.
+
 `<C-f>`
 
 ## Jumps
