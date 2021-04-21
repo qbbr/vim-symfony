@@ -8,10 +8,6 @@ if !exists("g:symfony_app_console_caller")
     let g:symfony_app_console_caller = "php"
 endif
 
-if !exists("g:symfony_enable_shell_mapping")
-    let g:symfony_enable_shell_mapping = 0
-endif
-
 fun! CompleteSymfonyContainer(base, res)
     let shellcmd = g:symfony_app_console_caller. ' '.g:symfony_app_console_path.' debug:container'
     let output = system(shellcmd)
@@ -85,11 +81,3 @@ au BufLeave *.twig   setlocal completefunc=oldcompletefunc
 au BufLeave *.php    setlocal completefunc=oldcompletefunc
 au BufLeave *.yml    setlocal completefunc=oldcompletefunc
 au BufLeave *.xml    setlocal completefunc=oldcompletefunc
-
-
-" Open console
-let g:symfony_enable_shell_cmd = g:symfony_app_console_caller." ".g:symfony_app_console_path." -s"
-
-if(g:symfony_enable_shell_mapping == 1)
-    map <C-F> :execute ":!"g:symfony_enable_shell_cmd<CR>
-endif

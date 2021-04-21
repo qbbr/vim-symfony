@@ -1,47 +1,44 @@
 # Symfony Vim plugin
 
+for SF2/3 see [sf-2-3](https://github.com/qbbr/vim-symfony/tree/sf-2-3) branch
+
 ## Autocomplete routes and services
 
 `<C-x><C-u>`
-
-## Symfony shell
-
-sf4 not supported, because new sf console does not exist "-s" option.
-
-`<C-f>`
 
 ## Jumps
 
 `<leader>v`
 
- * jump to controller from routing.yml
+ * jump to controller from routes.yaml
  * jump to view (twig) from controller
  * jump to view (twig) from view (twig)
 
-### Examples:
+### Examples
 
 ```yaml
-_welcome:
-    pattern:  /
-    defaults: { _controller: AcmeDemoBundle:Welcome:index } # cursor at this line
-    # will open: src/Acme/DemoBundle/Controller/WelcomeController.php
-
+index:
+    path: /
+    controller: App\Controller\DefaultController::index
+    # will be open: src/Controller/DefaultController.php and goto action line
 ```
 
 ```php
 class DefaultController extends Controller
 {
-    public function indexAction()
+    public function index()
     {
-        // cursor here and press <leader>v
-        // will open: src/Acme/DemoBundle/Resources/views/Default/index.html.twig
+        // will be open: templates/default/index.html.twig
+        return $this->render('default/index.html.twig', [ // cursor here and press <leader>v
+            'controller_name' => 'IndexController',
+        ]);
     }
 }
 ```
 
 ```twig
-{% extends "AcmeDemoBundle::layout.html.twig" %}
-{# will open: src/Acme/DemoBundle/Resources/views/layout.html.twig #}
+{% extends 'base.html.twig' %}
+{# will be open: templates/base.html.twig #}
 ```
 
 ## Snippets
