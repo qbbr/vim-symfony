@@ -1,12 +1,12 @@
 # Symfony Vim plugin
 
+for SF 2/3
+
 ## Autocomplete routes and services
 
 `<C-x><C-u>`
 
 ## Symfony shell
-
-sf4 not supported, because new sf console does not exist "-s" option.
 
 `<C-f>`
 
@@ -18,7 +18,7 @@ sf4 not supported, because new sf console does not exist "-s" option.
  * jump to view (twig) from controller
  * jump to view (twig) from view (twig)
 
-### Examples:
+### Examples
 
 ```yaml
 _welcome:
