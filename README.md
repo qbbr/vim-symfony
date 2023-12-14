@@ -1,7 +1,5 @@
 # Symfony Vim plugin
 
-[![Stand With Ukraine](https://raw.githubusercontent.com/vshymanskyy/StandWithUkraine/main/badges/StandWithUkraine.svg)](https://github.com/vshymanskyy/StandWithUkraine/blob/main/docs/README.md)
-
 for SF2/3 see [sf-2-3](https://github.com/qbbr/vim-symfony/tree/sf-2-3) branch
 
 ## Autocomplete routes and services
